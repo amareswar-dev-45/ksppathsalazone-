@@ -1,0 +1,1 @@
+CREATE POLICY "Authenticated can delete responses" ON public.student_responses FOR DELETE USING (auth.role() = 'authenticated'::text);
